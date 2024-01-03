@@ -9,8 +9,39 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+		<style>
+			.border-rainbow {
+				background-image: linear-gradient(white, white),
+					linear-gradient(to right, green, gold);
+				background-origin: border-box;
+				background-clip: content-box, border-box;
+			}
+		</style>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="">
+		<!-- NOTE: For this, I want three panels. A wide thin one for resume link, then below that, two 50%s. One for my blog with, maybe, 
+		the top 5 posts on the left side, and then one for the projects, with my favourites on the right side -->
+
+		<div class="w-3/5 mx-auto h-screen">
+			<header class="h-[20%] p-6">
+				<h1>Hi, I'm Trevor.</h1>
+				<p>
+					I am an analytical/biochemist who loves to program tools and
+					build websites!
+				</p>
+				<p>
+					<i>This</i> particular website displays my achievements, projects,
+					and blog.
+				</p>
+			</header>
+			<section
+				class="grid grid-cols-2 grid-rows-[1fr,3fr] gap-4 h-[75%] p-4"
+			>
+				<!-- I want to make these have rainbow borders later -->
+				<div class="rounded-lg w-full col-span-2 bg-black border"></div>
+				<div class="rounded-lg h-full bg-black"></div>
+				<div class="rounded-lg w-full bg-black"></div>
+			</section>
+		</div>
 	</body>
 </html>
